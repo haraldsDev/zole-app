@@ -1,0 +1,25 @@
+.button {
+	background-color: white;
+  	border-color: white;
+  	border-width: 4px;
+  	padding: 1rem 2rem; 
+}
+
+.button:hover {
+	background-color: yellow;
+  	border-color: #ee4b08;
+  	border-width: 5px;
+  	cursor: pointer;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 24px; 
+    margin-right: 2px;
+    background-color: pink;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
