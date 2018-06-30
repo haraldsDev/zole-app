@@ -69,3 +69,57 @@ let numOfPlayers = 3;
 
 
 
+
+
+// function ResultChange(value) {
+// 	let pointsOfLielais = 4;
+// 	// switch (value) {
+// 	// 		case 'Lielais loses Zole in Bezstikis':
+// 	// 		pointsOfLielais = -16;
+// 	// 		break;
+// 	// 		case '-14':
+// 	// 		pointsOfLielais = -14;
+// 	// 		break;
+// 	// 		case '-12':
+// 	// 		pointsOfLielais = -12;
+// 	// 		break;
+// 	// 		case '-8':
+// 	// 		pointsOfLielais = -8;
+// 	// 		break;
+// 	// 		case '-6':
+// 	// 		pointsOfLielais = -6;
+// 	// 		break;
+// 	// 		case '-4':
+// 	// 		pointsOfLielais = -4;
+// 	// 		break;
+// 	// 		case 'Lielais wins parasti':
+// 	// 		pointsOfLielais = 2;
+// 	// 		break;
+// 	// 		case '4':
+// 	// 		pointsOfLielais = 4;
+// 	// 		break;
+// 	// 		case '6':
+// 	// 		pointsOfLielais = 6;
+// 	// 		break;
+// 	// 		// 8 - bezstikis + pule.... padomāt, ka puli skaitīt
+// 	// 		case '10':
+// 	// 		pointsOfLielais = 10;
+// 	// 		break;
+// 	// 		case '12':
+// 	// 		pointsOfLielais = 12;
+// 	// 		break;
+// 	// 		case '14':
+// 	// 		pointsOfLielais = 14;
+// 	// 		break;
+// 	// 		default:
+// 	// 		pointsOfLielais = 2;
+// 	// }
+// 	// console.log('pointsOfLielais', pointsOfLielais);
+// 	return pointsOfLielais;
+
+// } 
+
+
+
+// offer 'dropdown' options to choose +2, +4, +6, +10, +12, +14. -4, -6, -8.
+
