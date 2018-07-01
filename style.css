@@ -1,23 +1,43 @@
+.container {
+  display:  flex;
+  margin-right:   20px;
+
+}
+
+#puleButton {
+  background-color: #ff8000;
+    border-color: #ff8000;
+    border-width: 2px;
+/*    padding: 1rem 2rem; */
+  width:  120px;
+  height:   30px;
+  margin-left:   30px;
+}
+
 .button {
-	background-color: white;
-  	border-color: white;
-  	border-width: 4px;
-  	padding: 1rem 2rem; 
+	background-color: #ffd9b3;
+  	border-color: #ffd9b3;
+  	border-width: 2px;
+/*  	padding: 1rem 2rem; */
+  width:  120px;
+  height:   30px;
 }
 
 .button:hover {
-	background-color: yellow;
-  	border-color: #ee4b08;
-  	border-width: 5px;
-  	cursor: pointer;
+	background-color: #ffbf80;
+  	border-color: #ffe6cc;
+/*  	border-width: 5px;
+*/  	cursor: pointer;
 }
 
 td, th {
     border: 1px solid #dddddd;
-    text-align: left;
-    padding: 24px; 
-    margin-right: 2px;
-    background-color: pink;
+    text-align: center;
+/*    padding: 14px; */   
+    width: 116px;
+/*    height: 5px; */    
+/*    margin-right: 14px;*/
+    background-color: #ffe6cc;
 }
 
 tr:nth-child(even) {
