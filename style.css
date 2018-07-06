@@ -4,14 +4,31 @@
 
 }
 
-#puleButton {
-  background-color: #ff8000;
+#pule-table {
+ /* background-color: #ff8000;
     border-color: #ff8000;
+    border-width: 2px;
+    padding: 1rem 2rem; 
+  width:  120px;
+  height:   30px;*/
+  margin-left:   30px;
+}
+
+#pules-header {
+  background-color: #ffd9b3;
+    border-color: #ffd9b3;
     border-width: 2px;
 /*    padding: 1rem 2rem; */
   width:  120px;
   height:   30px;
   margin-left:   30px;
+}
+
+#pules-header:hover {
+  background-color: #ffbf80;
+    border-color: #ffe6cc;
+/*    border-width: 5px;
+*/    cursor: pointer;
 }
 
 .button {
