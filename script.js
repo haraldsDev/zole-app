@@ -12,9 +12,31 @@ button1.addEventListener("click", addEmptyRow);
 button2.addEventListener("click", addEmptyRow);
 button3.addEventListener("click", addEmptyRow);
 
+let pointsOfLielais = 0;
 function calculateResultsOfRound() {
 	pointsOfLielais = Number(prompt('input Lielais points!'));
 	pointsOfMazais = pointsOfLielais / (numOfPlayers - 1) * -1;
+	// checkIfPuleExists();
+
+		if (
+			pointsOfLielais === 2 || 
+			pointsOfLielais === 4 || 
+			pointsOfLielais === 6
+			) {
+				console.log('lielaisWins:', pointsOfLielais);
+				let lielaisWins = true;
+				numberOfPules--;
+				console.log(numberOfPules);
+		} if (
+			pointsOfLielais === -4 || 
+			pointsOfLielais === -6 || 
+			pointsOfLielais === -8
+			) {
+				console.log('lielaisLoses:', pointsOfLielais);
+				let lielaisLoses = true;
+				numberOfPules++;
+				console.log(numberOfPules);
+		}
 }
 
 function player1Lielais() {
@@ -40,7 +62,6 @@ function player3Lielais() {
 	totalPointsOfPlayers[1] += pointsOfMazais;
 	totalPointsOfPlayers[2] += pointsOfLielais;
 }		
-
 
 function addEmptyRow() {
 	
