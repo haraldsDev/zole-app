@@ -1,0 +1,8 @@
+{
+  "name": "",
+  "version": "",
+  "description": "This is an App for counting points in a card game 'Zole'.",
+  "dependencies": {
+    "live-server": "^1.2.0"
+  }
+}

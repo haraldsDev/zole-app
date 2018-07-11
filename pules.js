@@ -1,7 +1,6 @@
 let pulesHeader = document.getElementById("pules-header");
 pulesHeader.addEventListener("click", addPule);
 
-
 let pulesOfPlayers = {
 	kopejasPules: 4,
 	pl1Pules: 3,
@@ -10,7 +9,6 @@ let pulesOfPlayers = {
 }
 
 let { kopejasPules, pl1Pules, pl2Pules, pl3Pules } = pulesOfPlayers;
-
 
 let numberOfPules = (kopejasPules + pl1Pules + pl2Pules + pl3Pules);
 
@@ -23,11 +21,6 @@ function addPule() {
 	console.log(pulesOfPlayers);
 	// addRowForPule();
 }
-
-// to do
-// function displayPules {
-
-// }
 
 pulesHeader.addEventListener("click", addRowForPule);
 
@@ -48,6 +41,48 @@ function addRowForPule() {
 	pulesHeader.appendChild(newTr1);
 }
 
+function checkIfPuleExists() {
+	// check if any pule exist
+	if ( numberOfPules > 0) {
+		if (LielaisLoses) { 
+			pl1Pules++;
+			console.log(pulesOfPlayers);
+		}
+		if (lielaisWins) {
+		  // if (Lielais Wins)
+			  if (pl1Pules > 0) {
+			  	pl1Pules--;
+			  } else if (pl1Pules < 1) {
+			  		if (kopejasPules > 0) {
+			  			kopejasPules--;
+			  			// TODO + run funcction 'Lielais Wins parasti'
+			  		} else if (kopejasPules < 1) 
+			  			// TODO take first Personiga pule, and take +3 points (=numOfPlayers) from the Personiga pule owner
+			  			return true;
+			  }
+		}
+	}
+}
+
+
+let pulesArray = [ 'kopejaPule', 'pl1Pules', 'pl3Pules', 'kopejaPule']
+
+// to remove first element of an array. Removed element is the returned value.  when first element is removed, the remaining elements are renumerated - starting with index 0.
+pulesArray.shift();
 
 
 
+function calculatePules() {
+	if (pulesArray.length > 0) {
+		if (LielaisLoses) {
+			pulesArray.push("pl1Pules");
+		} if (lielaisWins) {
+			for (i = 0; )
+		}
+	}
+}
+
+https://sdras.github.io/array-explorer/ 
+
+Array.find()
+//  Returns the found value in the array, if an element in the array satisfies the provided testing function or undefined if not found. 
