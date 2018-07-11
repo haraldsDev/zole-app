@@ -1,8 +1,9 @@
 # different files
-.featuresToImplement.js
-.countingResults.js
-.piezimes.js
-# .playerRegistration.js
+featuresToImplement.js
+countingResults.js
+piezimes.js
+playerRegistration.js
 
 # dependencies
 /node_modules 
+/some_files
