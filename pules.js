@@ -41,12 +41,14 @@ function addRowForPule() {
 	pulesHeader.appendChild(newTr1);
 }
 
+let lielaisWins = true;
+let lielaiLoses = false;
 function checkIfPuleExists() {
 	// check if any pule exist
 	if ( numberOfPules > 0) {
-		if (LielaisLoses) { 
+		if (lielaisLoses) { 
 			pl1Pules++;
-			console.log(pulesOfPlayers);
+			console.log('pulesOfPlayersXXX', pulesOfPlayers);
 		}
 		if (lielaisWins) {
 		  // if (Lielais Wins)
@@ -74,10 +76,11 @@ pulesArray.shift();
 
 function calculatePules() {
 	if (pulesArray.length > 0) {
-		if (LielaisLoses) {
+		if (lielaisLoses) {
 			pulesArray.push("pl1Pules");
 		} if (lielaisWins) {
-			for (i = 0; )
+			// check if 'pl1Pules' exist and return it, if no then check for 'kopejaPule' and return it, if no then return pule which is at 0 index
+			return pulesArray.find("pl1Pules") ? pulesArray.splice("pl1Pules") : pulesArray.find("kopejaPule") ? pulesArray.splice("kopejaPule") : pulesArray.shift();
 		}
 	}
 }
