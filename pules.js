@@ -67,8 +67,6 @@ function checkIfPuleExists() {
 }
 
 
-let pulesArray = [ 'kopejaPule', 'pl1Pules', 'pl3Pules', 'kopejaPule']
-
 // to remove first element of an array. Removed element is the returned value.  when first element is removed, the remaining elements are renumerated - starting with index 0.
 pulesArray.shift();
 
@@ -76,16 +74,33 @@ pulesArray.shift();
 
 function calculatePules() {
 	if (pulesArray.length > 0) {
-		if (lielaisLoses) {
-			pulesArray.push("pl1Pules");
-		} if (lielaisWins) {
+		// if (lielaisLoses) {
+		// 	pulesArray.push("pl1Pules");
+		// } 
+		// if (lielaisWins) {
 			// check if 'pl1Pules' exist and return it, if no then check for 'kopejaPule' and return it, if no then return pule which is at 0 index
-			return pulesArray.find("pl1Pules") ? pulesArray.splice("pl1Pules") : pulesArray.find("kopejaPule") ? pulesArray.splice("kopejaPule") : pulesArray.shift();
-		}
+			return pulesArray.includes('pl1Pules') ? pulesArray.splice('pl1Pules') : pulesArray.find('kopejaPule') ? pulesArray.splice('kopejaPule') : pulesArray.shift();
+		// }
 	}
 }
 
+
+
+let pulesArray = [ 'kopejaPule', 'pl1Pules', 'pl3Pules', 'kopejaPule'];
+
+let puletoIzpirkt = null;
+
+let checkingPules = () => {
+	puletoIzpirkt = pulesArray.includes('pl1Pules') ? pulesArray.indexOf('pl1Pules') : pulesArray.includes('kopejaPule') ? pulesArray.indexOf('kopejaPule') : null;
+	return puletoIzpirkt;
+}
+
+let removingCorrectPule = () => {
+	return isNaN(puletoIzpirkt) ? pulesArray.shift() : pulesArray.splice(puletoIzpirkt, 1);
+}
+
+
+
 https://sdras.github.io/array-explorer/ 
 
-Array.find()
-//  Returns the found value in the array, if an element in the array satisfies the provided testing function or undefined if not found. 
+
