@@ -41,66 +41,44 @@ function addRowForPule() {
 	pulesHeader.appendChild(newTr1);
 }
 
+
+
+// TODO + run funcction 'Lielais Wins parasti'
+			  		
+// TODO take first Personiga pule, and take +3 points (=numOfPlayers) from the Personiga pule owner
+			  				 
+
 let lielaisWins = true;
 let lielaiLoses = false;
-function checkIfPuleExists() {
-	// check if any pule exist
-	if ( numberOfPules > 0) {
-		if (lielaisLoses) { 
-			pl1Pules++;
-			console.log('pulesOfPlayersXXX', pulesOfPlayers);
-		}
-		if (lielaisWins) {
-		  // if (Lielais Wins)
-			  if (pl1Pules > 0) {
-			  	pl1Pules--;
-			  } else if (pl1Pules < 1) {
-			  		if (kopejasPules > 0) {
-			  			kopejasPules--;
-			  			// TODO + run funcction 'Lielais Wins parasti'
-			  		} else if (kopejasPules < 1) 
-			  			// TODO take first Personiga pule, and take +3 points (=numOfPlayers) from the Personiga pule owner
-			  			return true;
-			  }
-		}
-	}
-}
-
-
-// to remove first element of an array. Removed element is the returned value.  when first element is removed, the remaining elements are renumerated - starting with index 0.
-pulesArray.shift();
-
-
-
-function calculatePules() {
-	if (pulesArray.length > 0) {
-		// if (lielaisLoses) {
-		// 	pulesArray.push("pl1Pules");
-		// } 
-		// if (lielaisWins) {
-			// check if 'pl1Pules' exist and return it, if no then check for 'kopejaPule' and return it, if no then return pule which is at 0 index
-			return pulesArray.includes('pl1Pules') ? pulesArray.splice('pl1Pules') : pulesArray.find('kopejaPule') ? pulesArray.splice('kopejaPule') : pulesArray.shift();
-		// }
-	}
-}
-
-
 
 let pulesArray = [ 'kopejaPule', 'pl1Pules', 'pl3Pules', 'kopejaPule'];
 
-let puletoIzpirkt = null;
+let indexOfPuleToIzpirkt = null;
 
-let checkingPules = () => {
-	puletoIzpirkt = pulesArray.includes('pl1Pules') ? pulesArray.indexOf('pl1Pules') : pulesArray.includes('kopejaPule') ? pulesArray.indexOf('kopejaPule') : null;
-	return puletoIzpirkt;
+let findingIndexOfPuleToIzpirkt = () => {
+	indexOfPuleToIzpirkt = pulesArray.includes('pl1Pules') ? pulesArray.indexOf('pl1Pules') : pulesArray.includes('kopejaPule') ? pulesArray.indexOf('kopejaPule') : null;
+	return indexOfPuleToIzpirkt;
 }
 
 let removingCorrectPule = () => {
-	return isNaN(puletoIzpirkt) ? pulesArray.shift() : pulesArray.splice(puletoIzpirkt, 1);
+	findingIndexOfPuleToIzpirkt();
+
+	
+	let puleStringToRemove =  isNaN(indexOfPuleToIzpirkt) ? pulesArray.shift() : pulesArray.splice(indexOfPuleToIzpirkt, 1);
+
+	 return (puleStringToRemove === 'kopejaPule') ? additionalPointsForKopejaPule() : additionalPointsForPersonigaPule();
+	 
 }
 
+let additionalPointsForKopejaPule = () => {
+	pointsOfLielais += (numOfPlayers - 1);
+	pointsOfMazais += -1;
+}
 
-
+let additionalPointsForPersonigaPule = () => {
+	pointsOfLielais += numOfPlayers * 1;
+	pointsOfMazais */ kura pule tā bija!! */ += numOfPlayers * -1;
+}
 https://sdras.github.io/array-explorer/ 
 
 

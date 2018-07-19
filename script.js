@@ -19,16 +19,24 @@ let lielaiLoses = false;
 function calculateResultsOfRound() {
 	pointsOfLielais = Number(prompt('input Lielais points!'));
 	pointsOfMazais = pointsOfLielais / (numOfPlayers - 1) * -1;
-	checkIfPuleExists();
+	
+	checkIfLielaisWinsOrLoses();
+	checkPuleExists();
+	doPulePlusOrMinus();
 
+}
+	
+
+	
+
+let checkIfLielaisWinsOrLoses = () => {
 		if (
 			pointsOfLielais === 2 || 
 			pointsOfLielais === 4 || 
 			pointsOfLielais === 6
 			) {
-				console.log('lielaisWins:', pointsOfLielais);
+				console.log('lielaisWins:', );
 				lielaisWins = true;
-				numberOfPules--;
 				console.log('numberOfPules:', numberOfPules);
 		} if (
 			pointsOfLielais === -4 || 
@@ -37,10 +45,19 @@ function calculateResultsOfRound() {
 			) {
 				console.log('lielaisLoses:', pointsOfLielais);
 				lielaisLoses = true;
-				numberOfPules++;
+				
 				console.log('numberOfPules:', numberOfPules);
 		}
 }
+
+let checkPuleExists = () => {
+	return pulesArray.length > 0 ? doPulePlusOrMinus() : console.log('no pules at all');
+}
+
+let doPulePlusOrMinus = () => {
+		return lielaisLoses ? pulesArray.push("pl1Pules") : lielaisWins ? removingCorrectPule() : null;
+}
+
 
 function player1Lielais() {
 	calculateResultsOfRound();
